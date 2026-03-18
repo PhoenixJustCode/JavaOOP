@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p D:/8.Java/practice/week5/problem1/pr5/io/app)",
+      "Bash(mkdir -p D:/8.Java/practice/week5/problem2/pr5/io/app)",
+      "Bash(mkdir -p D:/8.Java/practice/week5/problem3/pr5/io/model)",
+      "Bash(mkdir -p D:/8.Java/practice/week5/problem3/pr5/io/app)",
+      "Bash(mkdir -p D:/8.Java/practice/week5/problem4/pr5/io/app)",
+      "Bash(javac pr5/io/model/Book.java pr5/io/app/LibraryApp.java)",
+      "Bash(javac pr5/io/app/TemperatureSensor.java)",
+      "Bash(java pr5.io.app.TemperatureSensor)",
+      "Bash(javac pr5/io/app/ExpressionEvaluator.java)",
+      "Bash(java pr5.io.app.ExpressionEvaluator)",
+      "Bash(javac pr5/io/app/SafeDivider.java)"
+    ]
+  }
+}
