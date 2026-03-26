@@ -3,3 +3,13 @@
 *.class
 
 .idea/
+
+*.claude/ 
+*.claude 
+
+.vscode/
+*.vscode
+
+*.log
+*.out
+*.out/
