@@ -4,6 +4,15 @@
 
 .idea/
 
+*.claude/ 
+*.claude 
+
+.vscode/
+*.vscode
+
+*.log
+*.out
+*.out/
 # Ignore log files
 
 *.class
