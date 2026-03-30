@@ -1,4 +1,4 @@
-package Problem1;
+package lab3.Problem1;
 
 public class Cylinder extends Shape implements Volume, LateralSurfaceArea {
 	final double PI = 3.14;

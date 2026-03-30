@@ -1,17 +1,15 @@
-package Problem1;
-
-import java.util.Scanner;
+// Запуск: java lab3.Problem1.Test
+package lab3.Problem1;
 
 public class Test {
-
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		Shape s1 = new Triangle(2, 5, 7, 4);
+		Shape s1 = new Triangle(3, 4, 5, 4);
 		System.out.println(s1);
-		int a = sc.nextInt();
-		Shape s2 = new Cube(a);
-		System.out.println(s2);
-		sc.close();
-	}
 
+		Shape s2 = new Cube(5);
+		System.out.println(s2);
+
+		Shape s3 = new Cylinder(3, 7);
+		System.out.println(s3);
+	}
 }

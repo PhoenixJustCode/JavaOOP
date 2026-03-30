@@ -1,4 +1,4 @@
-package Problem1;
+package lab3.Problem1;
 
 public class Triangle extends Shape implements Perimeter{
 	double a, b, c;

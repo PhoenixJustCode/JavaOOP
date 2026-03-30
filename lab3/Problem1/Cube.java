@@ -1,4 +1,4 @@
-package Problem1;
+package lab3.Problem1;
 
 public class Cube extends Shape implements Volume, LateralSurfaceArea, Perimeter{
 	int a;
@@ -24,7 +24,7 @@ public class Cube extends Shape implements Volume, LateralSurfaceArea, Perimeter
 
 	@Override
 	public double getLateralSurfaceArea() {
-		return 6*a*a;
+		return 4*a*a;
 	}
 
 	@Override

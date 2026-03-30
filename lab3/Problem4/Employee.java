@@ -1,35 +1,35 @@
-package Problem4;
+package lab3.Problem4;
 
 import java.util.Date;
 import java.util.Objects;
 
-public class Employee extends Person implements Comparable<Employee>, Cloneable{
+public class Employee extends Person implements Comparable<Employee>, Cloneable {
 	private double salary;
-	public Date hireDate;
+	private Date hireDate;
 	private String insuranceNumber;
-	
-	public Employee(String personName, double salary, Date date, String insuranceNumber) {
+
+	public Employee(String personName, double salary, Date hireDate, String insuranceNumber) {
 		super(personName);
 		this.salary = salary;
-		this.hireDate = date;
+		this.hireDate = hireDate;
 		this.insuranceNumber = insuranceNumber;
 	}
 
-	public double getSalary() {
-		return salary;
-	}
-
-	public void setSalary(double salary) {
+	public Employee(String personName, double salary) {
+		super(personName);
 		this.salary = salary;
+		this.hireDate = new Date();
+		this.insuranceNumber = "";
 	}
 
-	public String getInsuranceNumber() {
-		return insuranceNumber;
-	}
+	public double getSalary() { return salary; }
+	public void setSalary(double salary) { this.salary = salary; }
 
-	public void setInsuranceNumber(String insuranceNumber) {
-		this.insuranceNumber = insuranceNumber;
-	}
+	public Date getHireDate() { return hireDate; }
+	public void setHireDate(Date hireDate) { this.hireDate = hireDate; }
+
+	public String getInsuranceNumber() { return insuranceNumber; }
+	public void setInsuranceNumber(String insuranceNumber) { this.insuranceNumber = insuranceNumber; }
 
 	@Override
 	public boolean equals(Object obj) {
@@ -37,25 +37,31 @@ public class Employee extends Person implements Comparable<Employee>, Cloneable{
 		if (!super.equals(obj)) return false;
 		if (getClass() != obj.getClass()) return false;
 		Employee other = (Employee) obj;
-		return Objects.equals(insuranceNumber, other.insuranceNumber)
-				&& Double.doubleToLongBits(salary) == Double.doubleToLongBits(other.salary);
+		return Double.compare(salary, other.salary) == 0
+				&& Objects.equals(insuranceNumber, other.insuranceNumber)
+				&& Objects.equals(hireDate, other.hireDate);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(super.hashCode(), salary, hireDate, insuranceNumber);
 	}
 
 	@Override
 	public String toString() {
-		return "Employee [salary=" + salary + ", hireDate=" + hireDate + ", insuranceNumber=" + insuranceNumber + "]";
+		return "Employee [name=" + getPersonName() + ", salary=" + salary
+				+ ", hireDate=" + hireDate + ", insuranceNumber=" + insuranceNumber + "]";
 	}
 
-	public int compareTo(Employee e) {
-		  if(e.salary > this.salary) return -1;
-		  if(e.salary < this.salary) return 1;
-		  return 0;
-		 }
+	@Override
+	public int compareTo(Employee other) {
+		return Double.compare(this.salary, other.salary);
+	}
 
-	public Object clone() throws CloneNotSupportedException{
+	@Override
+	public Employee clone() throws CloneNotSupportedException {
 		Employee e = (Employee) super.clone();
-		e.hireDate=(Date) this.hireDate.clone();
+		e.hireDate = (Date) this.hireDate.clone();
 		return e;
 	}
-	
 }

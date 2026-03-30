@@ -11,7 +11,19 @@
       "Bash(java pr5.io.app.TemperatureSensor)",
       "Bash(javac pr5/io/app/ExpressionEvaluator.java)",
       "Bash(java pr5.io.app.ExpressionEvaluator)",
-      "Bash(javac pr5/io/app/SafeDivider.java)"
+      "Bash(javac pr5/io/app/SafeDivider.java)",
+      "Bash(javac lab3/Problem1/*.java)",
+      "Bash(javac lab3/Problem2/*.java)",
+      "Bash(javac lab3/Problem3/*.java)",
+      "Bash(javac -encoding UTF-8 lab3/Problem3/*.java)",
+      "Bash(javac -encoding UTF-8 lab3/Problem4/*.java)",
+      "Bash(javac -encoding UTF-8 lab3/Problem5/*.java)",
+      "Bash(javac -encoding UTF-8 lab3/Problem6/*.java)",
+      "Bash(java lab3.Problem1.Test)",
+      "Bash(java lab3.Problem2.Test)",
+      "Bash(java lab3.Problem4.Test)",
+      "Bash(java lab3.Problem5.SortTest)",
+      "Bash(java -Dfile.encoding=UTF-8 lab3.Problem6.Test)"
     ]
   }
 }

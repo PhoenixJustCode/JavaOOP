@@ -1,9 +1,13 @@
-package Problem4;
+package lab3.Problem4;
 
 import java.util.Objects;
 
 public class Person {
 	private String personName;
+
+	public Person() {
+		this.personName = "Unknown";
+	}
 
 	public Person(String personName) {
 		this.personName = personName;
@@ -16,7 +20,7 @@ public class Person {
 	public void setPersonName(String personName) {
 		this.personName = personName;
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj) return true;
@@ -24,9 +28,14 @@ public class Person {
 		Person other = (Person) obj;
 		return Objects.equals(personName, other.personName);
 	}
-	
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(personName);
+	}
+
+	@Override
 	public String toString() {
 		return "Person [personName=" + personName + "]";
 	}
-	
 }

@@ -1,23 +1,26 @@
-package Problem2;
-
-import java.util.Scanner;
+// Запуск: java lab3.Problem2.Test
+package lab3.Problem2;
 
 public class Test {
-
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int x = sc.nextInt();
-		int y = sc.nextInt();
-		MoveablePoints m1 = new MoveablePoints(x, y);
-		m1.moveDown();
-		System.out.println(m1);
-		m1.moveLeft();
-		System.out.println(m1);
-		m1.moveRight();
-		System.out.println(m1);
-		m1.moveUp();
-		System.out.println(m1);
-		sc.close();
-	}
+		MoveablePoints point = new MoveablePoints(0, 0);
+		System.out.println("Start: " + point);
+		point.moveRight();
+		System.out.println("moveRight: " + point);
+		point.moveUp();
+		System.out.println("moveUp: " + point);
+		point.moveLeft();
+		System.out.println("moveLeft: " + point);
+		point.moveDown();
+		System.out.println("moveDown: " + point);
 
+		System.out.println();
+
+		Car car = new Car("Toyota", 5);
+		System.out.println("Start: " + car);
+		car.moveRight();
+		System.out.println("moveRight: " + car);
+		car.moveLeft();
+		System.out.println("moveLeft: " + car);
+	}
 }
