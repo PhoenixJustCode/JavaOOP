@@ -13,3 +13,22 @@
 *.log
 *.out
 *.out/
+# Ignore log files
+
+*.class
+*.log
+# Ignore build directories
+/build
+/target
+# Ignore IDE-specific files
+/.idea
+*.iml
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+*.claude
+*.vscode
+*.vs   
+# Ignore Maven and Gradle files
+
+*.dat
