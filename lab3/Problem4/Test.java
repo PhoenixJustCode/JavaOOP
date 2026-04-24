@@ -1,4 +1,4 @@
-// Запуск: java lab3.Problem4.Test
+// javac lab3/Problem4/*.java && java -cp . lab3.Problem4.Test
 package lab3.Problem4;
 
 import java.text.ParseException;

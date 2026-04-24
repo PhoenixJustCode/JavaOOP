@@ -1,4 +1,4 @@
-// Запуск: java lab3.Problem2.Test
+// javac lab3/Problem2/*.java && java -cp . lab3.Problem2.Test
 package lab3.Problem2;
 
 public class Test {

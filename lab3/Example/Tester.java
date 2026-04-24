@@ -1,3 +1,4 @@
+// javac -d . Example/*.java && java -cp . Problem4.Tester
 package Problem4;
 
 import java.text.ParseException;

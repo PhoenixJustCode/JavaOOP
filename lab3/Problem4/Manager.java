@@ -35,7 +35,7 @@ public class Manager extends Employee {
 				+ ", bonus=" + bonus + ", team=" + team + "]";
 	}
 
-	// Если зарплаты равны - сравниваем по бонусу
+	// Если зарплаты равны ТО сравниваем по бонусу
 	@Override
 	public int compareTo(Employee other) {
 		int result = super.compareTo(other);
@@ -46,7 +46,7 @@ public class Manager extends Employee {
 		return result;
 	}
 
-	// Глубокое клонирование - клонируем Vector и каждого сотрудника в нём
+	// клонируем Vector и каждого сотрудника в нём
 	@Override
 	public Manager clone() throws CloneNotSupportedException {
 		Manager m = (Manager) super.clone();
